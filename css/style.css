@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+body {
+  /* position: relative; */
+  font-family: "Roboto", sans-serif;
+  /* background-color: #d0f5f9; */
+  font-size: 16px;
+  background-image: url(./loading_Moment.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.thevideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.thevideo video {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+@keyframes loading1 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.thevideo0 {
+  z-index: 100;
+}
+
+.thevideo1 {
+  z-index: 600;
+  animation-name: loading1;
+  animation-duration: 1s;
+  animation-delay: 4.5s;
+  opacity: 1;
+  animation-iteration-count: infinite;
+}
+
+.overlay {
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+  z-index: 999;
+  margin: 50px auto;
+  background-color: #f5f8f9;
+  /* height: 430px; */
+  width: 350px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.796);
+  overflow: hidden;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.card__header {
+  height: 215px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.card__header img {
+  width: 100%;
+  opacity: 0.9;
+}
+
+.card__header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(71, 32, 84, 0.2);
+}
+
+.card__body {
+  position: relative;
+}
+
+.card__body::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -50px;
+  background-color: #f5f8f9;
+  height: 100px;
+  width: 150%;
+  display: block;
+  transform: rotate(10deg);
+  box-shadow: 0 0 30px rgb(252, 252, 252);
+}
+
+.card__content {
+  position: relative;
+  padding: 0 20px;
+}
+
+.card__title {
+  padding: 0;
+  margin: 0;
+  color: #004358;
+}
+
+.card__title h2 {
+  /* font-family: 'Cookie', cursive; */
+  /* font-size: 4rem; */
+  text-shadow: 0 0 2px rgb(36, 36, 36);
+}
+
+.card__title p {
+  font-family: 'Cookie', cursive;
+  font-size: 1.2rem;
+}
+
+/* Add */
+.card__add {
+  /* background: #DE3963; */
+  display: flex;
+  position: relative;
+
+  margin-top: 5px;
+}
+
+.card__add input {
+  width: 100%;
+  height: 40px;
+  /* float: left; */
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 18px;
+  /* padding: 0 60px 0 0; */
+  background: #015d79cb;
+  border-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+}
+
+.card__add input::placeholder {
+  color: #fff;
+}
+
+.card__add button {
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* width: 40px;
+  height: 40px; */
+  box-shadow: 0 0 0 3px #015d79;
+  cursor: pointer;
+  outline: none;
+}
+
+.card__add i {
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background: #fff;
+  line-height: 40px;
+  color: #015d79;
+}
+
+/* Todo list */
+ul.todo {
+  list-style: none;
+}
+
+ul.todo li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #444;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgba(44, 62, 80, 0.3);
+  margin: 0 0 10px 0;
+  align-items: center;
+  padding: 0 10px;
+  word-break: break-word;
+}
+
+ul.todo#todo {
+  padding: 0;
+  padding-top: 30px;
+}
+
+ul.todo#completed {
+  position: relative;
+  padding: 30px 0;
+}
+
+ul.todo#completed:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+
+  position: absolute;
+  top: 14px;
+  left: 50%;
+
+  margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after {
+  content: "You have nothing to-do!";
+  margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after {
+  content: "You have yet to complete any tasks.";
+}
+
+ul.todo#todo:after,
+ul.todo#completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+ul.todo li .buttons button {
+  background: none;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0 5px 5px;
+  font-size: 1rem;
+}
+
+ul.todo li .buttons .remove {
+  color: #aaa;
+}
+
+ul.todo li .buttons .remove:hover {
+  color: #fa396b;
+}
+
+ul.todo li .buttons .complete {
+  color: #aaa;
+}
+
+ul.todo li .buttons .complete:hover {
+  color: #25b99a;
+}
+
+ul.todo#todo li .buttons .complete .fas {
+  display: none;
+}
+
+ul.todo#todo li .buttons .complete .far {
+  display: block;
+}
+
+ul.todo#completed li .buttons .complete .fas {
+  display: block;
+  color: #25b99a;
+}
+
+ul.todo#completed li .buttons .complete .far {
+  display: none;
+}
+
+ul.todo#completed .complete {
+  color: #25b99a;
+  font-weight: bold;
+}
+
+ul.todo#completed span {
+  color: #25b99a;
+}
+
+.alert-danger {
+  color: red;
+}
