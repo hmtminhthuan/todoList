@@ -40,9 +40,29 @@ body {
   height: 100%;
 }
 
+@keyframes non {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.loading_gif {
+  animation-name: non;
+  animation-duration: 1s;
+  animation-delay: 12s;
+  animation-iteration-count: infinite;
+}
 
 .thevideo0 {
   z-index: 100;
+}
+
+.animate__animated {
+  animation-delay: 8.5s;
 }
 
 .overlay {
