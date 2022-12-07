@@ -316,6 +316,6 @@ ul.todo#completed span {
 }
 
 @media screen and (max-width: 800px) {
-  .thevideo1{display: none !important; }
+  .thevideo1,.thevideo1 video{display: none !important; }
   
 }
