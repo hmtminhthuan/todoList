@@ -29,14 +29,11 @@
   </head>
 
   <body>
-    <div class="loading_gif">
-      <img src="./loading.gif" alt="loading" />
-    </div>
-    <div class="thevideo thevideo0 animate__animated animate__fadeIn">
+    <div class="thevideo thevideo0">
       <img src="./video.gif" alt="" />
       <div class="overlay"></div>
     </div>
-    <div class="card animate__animated animate__zoomInDown">
+    <div class="card">
       <div class="card__header">
         <img src="./img/pc-6046539_960_720.jpg" />
       </div>
@@ -66,24 +63,5 @@
         </div>
       </div>
     </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      $(function () {
-        $(".toggle-btn").click(function () {
-          $(".filter-btn").toggleClass("open");
-        });
-
-        $(".filter-btn a").click(function () {
-          $(".filter-btn").removeClass("open");
-        });
-      });
-    </script>
-    <script src="js/main.js"></script>
   </body>
 </html>
