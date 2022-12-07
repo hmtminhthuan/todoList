@@ -314,3 +314,8 @@ ul.todo#completed span {
 .alert-danger {
   color: red;
 }
+
+@media screen and (max-width: 800px) {
+  .thevideo1{display: none !important; }
+  
+}
