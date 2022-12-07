@@ -47,7 +47,7 @@ body {
   height: 100%;
 }
 
-@keyframes loading1 {
+/* @keyframes loading1 {
   from {
     opacity: 0;
   }
@@ -55,20 +55,20 @@ body {
   to {
     opacity: 0;
   }
-}
+} */
 
 .thevideo0 {
   z-index: 100;
 }
 
-.thevideo1 {
+/* .thevideo1 {
   z-index: 600;
   animation-name: loading1;
   animation-duration: 1s;
   animation-delay: 5s;
   opacity: 1;
   animation-iteration-count: infinite;
-}
+} */
 
 .overlay {
   z-index: 500;
